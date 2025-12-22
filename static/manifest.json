@@ -1,6 +1,6 @@
 {
-  "short_name": "Leap of Fate",
-  "name": "Leap of Fate",
+  "short_name": "Go With The Floe",
+  "name": "Go With The Floe",
   "description": "Rotate blocks of letters to unscramble and reveal five horizontal words.",
   "dir": "ltr",
   "lang": "en",
@@ -458,6 +458,6 @@
   "id": "/",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#426712",
-  "background_color": "#426712"
+  "theme_color": "#76f2ff",
+  "background_color": "#76f2ff"
 }

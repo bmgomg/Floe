@@ -29,6 +29,6 @@
         grid-auto-flow: column;
         transition: opacity 0.5s;
         color: var(--rose);
-        filter: drop-shadow(0 0 1px white);
+        /* filter: drop-shadow(0 0 1px white); */
     }
 </style>
