@@ -1,5 +1,5 @@
 <script>
-    import LilyPad from '$lib/images/Lily Pad.webp';
+    import Floe from '$lib/images/Floe W.webp';
     import { reBoard } from './shared.svelte';
     import { _sound } from './sound.svelte';
     import { ss } from './state.svelte';
@@ -50,7 +50,7 @@
 </script>
 
 <div bind:this={_this} class="button no-highlight {current ? 'current' : ''} {pressed ? 'pressed' : ''}" onpointerdown={onPointerDown}>
-    <img class="lilypad" src={LilyPad} alt="" width={sz} />
+    <img class="lilypad" src={Floe} alt="" width={sz} />
     <div class="value" style="font-size: {fsz}px">{SIZES[level - 1]}</div>
 </div>
 
@@ -77,7 +77,7 @@
     .lilypad {
         grid-area: 1/1;
         border-radius: 50%;
-        background: var(--darkgreen);
+        background: var(--darkblue);
     }
 
     .current {
@@ -86,9 +86,9 @@
 
     .value {
         grid-area: 1/1;
-        color: var(--white);
+        color: #284367;
         font-weight: bold;
         font-family: Quicksand;
-        filter: drop-shadow(0 0 5px black);
+        filter: drop-shadow(0 0 3px white);
     }
 </style>

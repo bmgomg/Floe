@@ -24,10 +24,10 @@
         place-content: center;
         gap: 20px;
         border-radius: 50vh;
-        /* border: 2px solid #1c4500; */
-        border: 2px solid var(--lightgreen);
-        background: #336d07;
-        color: var(--lightgreen);
+        /* border: 2px solid #001c45; */
+        border: 2px solid var(--lightblue);
+        background: #284367;
+        color: var(--lightblue);
         font-size: 18px;
         filter: drop-shadow(0 0 3px #000000a0);
     }
@@ -45,7 +45,7 @@
 
     .label {
         /* color: black; */
-        color: #1c4500;
+        color: #001c45;
     }
 
     .flow {

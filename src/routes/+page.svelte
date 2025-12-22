@@ -68,11 +68,12 @@
             --gold: #ffe4aa;
             --white: #fff;
             --red: #fe0000;
-            --rose: #fe0000;
+            --rose: #ff6867;
             --blue: #00bbff;
             --yellow: #ca7e31;
-            --darkgreen: #426712;
+            --darkblue: #124267;
             --lightgreen: #c6ffaa;
+            --lightblue: #aac6ff;
         }
 
         .button-base {

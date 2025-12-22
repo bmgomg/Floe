@@ -45,16 +45,17 @@
         padding: 10px 20px;
         font-family: Quicksand;
         font-weight: bold;
-        color: lightyellow;
+        color: var(--lightblue);
         border-radius: 50vh;
-        border: 3px solid #1c4500;
-        background: #336d07;
+        border: 3px solid var(--lightblue);
+        background: #284367;
         filter: drop-shadow(0 0 3px #000000a0);
     }
 
     .button:hover {
         filter: contrast(1.1) saturate(1.5);
-        border: 3px solid #f6c250;
+        border: 3px solid #fff;
+        color: white;
     }
 
     .x {

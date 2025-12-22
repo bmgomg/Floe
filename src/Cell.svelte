@@ -354,7 +354,7 @@
         grid-area: 1/1;
         width: 100%;
         transition: filter 1s;
-        background: var(--darkgreen);
+        background: var(--darkblue);
         border-radius: 50%;
         filter: drop-shadow(0 0 3px #000000a0);
     }

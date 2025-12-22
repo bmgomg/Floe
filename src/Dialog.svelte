@@ -10,7 +10,7 @@
     const li = '<li style="margin: 8px 0 0 -20px;">';
     const red = '<span style="color: var(--red)">';
     const blue = '<span style="color: var(--blue)">';
-    const hi = '<span style="color: var(--lightgreen)">';
+    const hi = '<span style="color: var(--lighblue)">';
 
     const CONTENT = `
         <span>Unite two frogs at the center of the lily pond.</span>
@@ -87,7 +87,7 @@
         background: #00000080;
         backdrop-filter: blur(5px);
         border-radius: 50px;
-        border: 3px solid #c6ffaa70;
+        border: 3px solid #aac6ff;
     }
 
     .initial {
