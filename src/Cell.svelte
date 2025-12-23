@@ -356,7 +356,7 @@
         transition: filter 1s;
         background: var(--darkblue);
         border-radius: 50%;
-        filter: drop-shadow(0 0 3px #000000a0);
+        filter: drop-shadow(0 0 3px #000000);
     }
 
     .warn {

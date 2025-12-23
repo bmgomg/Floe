@@ -67,7 +67,7 @@
     }
 
     .button:hover {
-        filter: contrast(1.2) brightness(1.2);
+        filter: contrast(1.1) brightness(1.1);
     }
 
     .pressed {
