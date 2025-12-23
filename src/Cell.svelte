@@ -288,6 +288,7 @@
         border: 4px dotted;
         pointer-events: auto;
         cursor: pointer;
+        z-index: 1;
     }
 
     .trace-red {
@@ -305,10 +306,11 @@
     .trace-center {
         grid-area: 1/1;
         box-sizing: border-box;
-        border: 2px solid var(--white);
-        border-radius: 50%;
-        z-index: 1;
-        scale: 1.1;
+        scale: 1.15;
+        background-image: url('$lib/images/Outline.webp');
+        background-size: cover;
+        filter: drop-shadow(0 0 3px white);
+        z-index: -1;
     }
 
     .inner {
@@ -385,17 +387,6 @@
         place-self: center;
         z-index: 1;
         width: 25%;
-    }
-
-    .star {
-        aspect-ratio: 1;
-        background: var(--white);
-        clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
-        translate: 0 10%;
-    }
-
-    .star-won {
-        background: #a400a4;
     }
 
     .pos {
