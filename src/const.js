@@ -26,17 +26,4 @@ export const LEVELS = [
     { size: 5, cx: 3, cy: 5, secs: 12, frogs: [[3, 1], [3, 9]] },
     { size: 7, cx: 4, cy: 7, secs: 15, frogs: [[4, 1], [4, 13]] },
     { size: 9, cx: 5, cy: 9, secs: 18, frogs: [[5, 1], [5, 17]] },
-    { size: 5, cx: 3, cy: 5, secs: 12, frogs: [[3, 1], [5, 7], [1, 7]] },
-    { size: 7, cx: 4, cy: 7, secs: 15, frogs: [[4, 1], [7, 10], [1, 10]] },
-    { size: 9, cx: 5, cy: 9, secs: 18, frogs: [[5, 1], [9, 13], [1, 13]] },
 ];
-
-// export const POND_SIZE = 7;
-// export const CX = (POND_SIZE + 1) / 2;
-// export const CY = POND_SIZE;
-// export const LAST_ROW = POND_SIZE * 2 - 1;
-// export const CELL_RADIUS = 40;
-// export const CELL_SIZE = CELL_RADIUS * 2;
-// export const CELL_PADDING = CELL_RADIUS * 0.1;
-// export const POND_DX = sqrt3 * CELL_RADIUS * POND_SIZE;
-// export const POND_DY = 2 * CELL_RADIUS * POND_SIZE;
