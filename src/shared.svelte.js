@@ -69,10 +69,10 @@ export const makeFrog = (src) => {
     switch (src) {
         case FrogRed:
             f = li.frogs[0];
-            return { col: f[0], row: f[1], deg: 0, src };
+            return { col: f[0], row: f[1], src };
         case FrogBlue:
             f = li.frogs[1];
-            return { col: f[0], row: f[1], deg: 0, src };
+            return { col: f[0], row: f[1], src };
         default:
     }
 };

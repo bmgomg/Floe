@@ -1,5 +1,5 @@
 <script>
-    import Floe from '$lib/images/Floe W.webp';
+    import Floe from '$lib/images/Floe.webp';
     import { reBoard } from './shared.svelte';
     import { _sound } from './sound.svelte';
     import { ss } from './state.svelte';
@@ -77,7 +77,6 @@
     .lilypad {
         grid-area: 1/1;
         border-radius: 50%;
-        /* background: var(--darkblue); */
     }
 
     .current {

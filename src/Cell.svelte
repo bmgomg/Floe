@@ -1,6 +1,6 @@
 <script>
     import Both from '$lib/images/Both.webp';
-    import Floe from '$lib/images/Floe W.webp';
+    import Floe from '$lib/images/Floe.webp';
     import HeartBroken from '$lib/images/Heart Broken.webp';
     import Heart from '$lib/images/Heart.webp';
     import { random } from 'lodash-es';
@@ -146,7 +146,7 @@
         const dx = r2.left - r1.left;
         const dy = r2.top - r1.top;
 
-        return `translate(${dx}px, ${dy}px) rotate(${dest.deg}deg)`;
+        return `translate(${dx}px, ${dy}px)`;
     };
 
     const onPointerDown = () => {
@@ -168,33 +168,7 @@
             startTimer();
         }
 
-        const dir = `${col - hotFrog.col}${row - hotFrog.row}`;
-        let d = hotFrog.deg;
-
-        switch (dir) {
-            case '0-2':
-                d = 0;
-                break;
-            case '1-1':
-                d = 60;
-                break;
-            case '11':
-                d = 120;
-                break;
-            case '02':
-                d = 180;
-                break;
-            case '-11':
-                d = -120;
-                break;
-            case '-1-1':
-                d = -60;
-                break;
-            default:
-                break;
-        }
-
-        ss.frogs[ss.turn - 1].dest = { col, row, deg: 0 };
+        ss.frogs[ss.turn - 1].dest = { col, row };
     };
 
     $effect(() => {
@@ -207,7 +181,6 @@
 
             ss.frogs[ss.turn - 1].col = dest.col;
             ss.frogs[ss.turn - 1].row = dest.row;
-            ss.frogs[ss.turn - 1].deg = 0;
 
             delete ss.frogs[ss.turn - 1].dest;
 
@@ -244,7 +217,11 @@
         id={innerId(cell)}
         class="inner {show || (center && ss.over === 'won') ? 'show' : ''}"
         style="transition-duration: {SINK_DURATION}ms;">
-        <img class="lilypad {warn && !ss.over ? 'warn' : ''}" src={Floe} alt="" style="scale: {center ? 1 : 1}" />
+        <img
+            class="lilypad {warn && !ss.over ? 'warn' : ''}"
+            src={Floe}
+            alt=""
+            style="scale: {center ? 1 : 1};" />
         <img
             class="lily {ss.over && !frog && cell.visited ? 'visible' : ''}"
             src={ss.over === 'won' ? Heart : HeartBroken}
@@ -254,7 +231,7 @@
             {#if center}
                 {#if ss.spin === 1}
                     {#each frogs as f (f)}
-                        <img class="frog" src={f.src} alt="" style="transform: rotate({f.deg}deg)" />
+                        <img class="frog" src={f.src} alt="" />
                     {/each}
                 {/if}
                 {#if ss.spin}
@@ -267,7 +244,7 @@
                 {/if}
             {/if}
         {:else if frog}
-            {@const transform = frog.dest ? calcJump() : `rotate(${frog.deg}deg)`}
+            {@const transform = frog.dest ? calcJump() : ''}
             <img
                 bind:this={_frog}
                 class="frog {frog === hotFrog && !ss.over ? 'pulse' : ''}"
@@ -279,7 +256,7 @@
     </div>
     {#if !frog && !samePos(hotFrog?.dest, cell) && !cell.visited && !ss.over}
         {@const fsz = ss.cellRadius * 0.7}
-        <div class="value-container" style="font-size: {fsz}px; z-index: {center ? 3 : 1}" transition:fade={{ duration: 100 }}>
+        <div class="value-container" style="font-size: {fsz}px; z-index: {center ? 3 : 1};" transition:fade={{ duration: 100 }}>
             <div class="value" style="filter: {shadow};">{cellValue(cell)}</div>
         </div>
     {/if}
