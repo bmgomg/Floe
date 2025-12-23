@@ -67,8 +67,8 @@
             background: #202020;
             --gold: #ffe4aa;
             --white: #fff;
-            --red: #fe0000;
-            --rose: #ff6867;
+            --red: #dd4a11;
+            --rose: #dd4a11;
             --blue: #00bbff;
             --yellow: #ca7e31;
             --darkblue: #124267;

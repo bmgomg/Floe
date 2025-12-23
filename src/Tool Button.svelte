@@ -56,7 +56,7 @@
     }
 
     .button:hover {
-        filter: contrast(1.2) brightness(1.2);
+        filter: drop-shadow(0 0 10px white);
     }
 
     .pressed {
