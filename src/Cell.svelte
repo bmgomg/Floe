@@ -25,7 +25,7 @@
     const frog = $derived(frogs.length ? frogs[0] : null);
     const cid = $derived(cellId(cell));
     let _frog = $state();
-    const shadow = $derived(`drop-shadow(0 0 ${3 - (li.size - 5) / 2}px #000a)`);
+    const shadow = $derived(`drop-shadow(0 0 ${3 - (li.size - 5) / 2}px var(--lightblue))`);
 
     const float = (on) => {
         show = (on || ss.over) && ss.over !== cell;
@@ -352,7 +352,6 @@
         grid-area: 1/1;
         width: 100%;
         transition: filter 1s;
-        background: var(--darkblue);
         border-radius: 50%;
         filter: drop-shadow(0 0 3px #000000);
     }

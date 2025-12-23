@@ -77,11 +77,11 @@
     .lilypad {
         grid-area: 1/1;
         border-radius: 50%;
-        background: var(--darkblue);
+        /* background: var(--darkblue); */
     }
 
     .current {
-        border: 4px dotted var(--lightblue);
+        filter: drop-shadow(0 0 15px var(--white));
     }
 
     .value {
