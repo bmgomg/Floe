@@ -14,7 +14,7 @@
     const CONTENT = `
         <span>Reunite two stranded researchers at the center of the drifting ice field.</span>
         ${ul}
-        ${li}Tap an ice floe beside the ${red}red</span>‑jacketed researcher to move them forward.</li>
+        ${li}Tap an ice floe beside the ${red}red</span>‑jacketed researcher to make them move.</li>
         ${li}Then, move the ${blue}blue</span>‑jacketed researcher.</li>
         ${li}Continue alternating until they meet on the ${hi}central</span> floe.</li>
         ${li}If a floe ${hi}thaws</span> beneath a researcher, they ${hi}fall through</span>—and the ${hi}mission ends</span> in failure.</li>
