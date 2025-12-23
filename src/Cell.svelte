@@ -1,8 +1,7 @@
 <script>
-    import FrogRB from '$lib/images/Both.webp';
-    import FrogYRB from '$lib/images/Frog YRB.webp';
+    import Both from '$lib/images/Both.webp';
+    import Floe from '$lib/images/Floe W.webp';
     import HeartBroken from '$lib/images/Heart Broken.webp';
-    import LilyPad from '$lib/images/Floe W.webp';
     import Heart from '$lib/images/Heart.webp';
     import { random } from 'lodash-es';
     import { fade } from 'svelte/transition';
@@ -245,7 +244,7 @@
         id={innerId(cell)}
         class="inner {show || (center && ss.over === 'won') ? 'show' : ''}"
         style="transition-duration: {SINK_DURATION}ms;">
-        <img class="lilypad {warn && !ss.over ? 'warn' : ''}" src={LilyPad} alt="" style="scale: {center ? 0.85 : 1}" />
+        <img class="lilypad {warn && !ss.over ? 'warn' : ''}" src={Floe} alt="" style="scale: {center ? 0.85 : 1}" />
         <img
             class="lily {ss.over && !frog && cell.visited ? 'visible' : ''}"
             src={ss.over === 'won' ? Heart : HeartBroken}
@@ -262,7 +261,7 @@
                     <img
                         class="frog"
                         style="filter: drop-shadow(0 0 {5 - ss.level}px #000000);"
-                        src={ss.level < 4 ? FrogRB : FrogYRB}
+                        src={Both}
                         alt=""
                         in:fade={{ duration: 750 }} />
                 {/if}
@@ -271,7 +270,7 @@
             {@const transform = frog.dest ? calcJump() : `rotate(${frog.deg}deg)`}
             <img
                 bind:this={_frog}
-                class="frog {frog === hotFrog ? 'pulse' : ''}"
+                class="frog {frog === hotFrog && !ss.over ? 'pulse' : ''}"
                 src={frog.src}
                 alt=""
                 style="transform: {transform}; filter: drop-shadow(0 0 {5 - ss.level}px #000000);"
@@ -332,7 +331,6 @@
         border: 2px solid var(--white);
         border-radius: 50%;
         z-index: 1;
-        /* scale: 1.2; */
     }
 
     .inner {
@@ -360,7 +358,7 @@
     }
 
     .warn {
-        filter: hue-rotate(180deg);
+        filter: hue-rotate(180deg) grayscale(0.7);
     }
 
     .frog {

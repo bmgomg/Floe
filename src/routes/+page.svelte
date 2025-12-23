@@ -48,7 +48,7 @@
     post(() => (splash = false), 2000);
 </script>
 
-<div class="app {ss.vert ? 'vert' : ''}">
+<div class="app">
     <GamePage />
     <Dialog />
     {#if splash}
@@ -74,6 +74,8 @@
             --darkblue: #124267;
             --lightgreen: #c6ffaa;
             --lightblue: #aac6ff;
+            /* --label: #001c45; */
+            --label: #ffffff40;
         }
 
         .button-base {
@@ -97,6 +99,16 @@
             -ms-user-select: none;
             user-select: none;
         }
+
+		.grad-blue {
+			background: -webkit-linear-gradient(-90deg, #fff 0%, #aac6ff 65%, #aac6ff 100%);
+		}
+
+		.grad-text {
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
     }
 
     .app {
@@ -109,11 +121,13 @@
         outline: none !important;
         background-image: url('$lib/images/Landscape.webp');
         background-size: cover;
+        background-position: center;
         place-content: center;
     }
 
-    .vert {
-        background-image: url('$lib/images/Portrait.webp');
+    @font-face {
+        font-family: Futura;
+        src: url('$lib/fonts/FuturaCyrillicBold.ttf');
     }
 
     @font-face {

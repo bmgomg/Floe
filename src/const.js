@@ -16,12 +16,10 @@ export const DLG_INTRO = 'INTRO';
 export const DLG_HELP = 'HELP';
 export const DLG_LEVELS = 'LEVELS';
 export const PROMPT_RESET_STATS = 'Reset stats?';
-export const PROMPT_LOST = 'Oh, no! Leap again?';
-export const PROMPT_WON = 'Go frogs! Leap again?';
-export const PROMPT_BEST_SCORE = 'Best score! Leap again?';
-export const PROMPT_PLAY_AGAIN = 'Leap again?';
-export const PROMPT_START = 'Jump in!';
-export const PROMPT_RESUME = 'Jump back';
+export const PROMPT_LOST = 'Oh, no! Try again?';
+export const PROMPT_WON = 'Reunited! New mission?';
+export const PROMPT_BEST_SCORE = 'Best score! New mission?';
+export const PROMPT_PLAY_AGAIN = 'Try again?';
 export const TICK_MS = 10;
 
 export const LEVELS = [

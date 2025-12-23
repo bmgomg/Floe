@@ -1,6 +1,6 @@
 import FrogBlue from '$lib/images/Girl.webp';
 import FrogRed from '$lib/images/Boy.webp';
-import FrogYellow from '$lib/images/Frog Y.webp';
+// import FrogYellow from '$lib/images/Frog Y.webp';
 import { APP_KEY, LEVELS, TICK_MS } from './const';
 import { _sound } from './sound.svelte';
 import { _prompt, _stats, ss } from './state.svelte';
@@ -73,9 +73,6 @@ export const makeFrog = (src) => {
         case FrogBlue:
             f = li.frogs[1];
             return { col: f[0], row: f[1], deg: 0, src };
-        case FrogYellow:
-            f = li.frogs[2];
-            return { col: f[0], row: f[1], deg: 0, src };
         default:
     }
 };
@@ -117,10 +114,6 @@ export const onStart = () => {
 
         ss.frogs.push(makeFrog(FrogRed));
         ss.frogs.push(makeFrog(FrogBlue));
-
-        if (li.frogs.length === 3) {
-            ss.frogs.push(makeFrog(FrogYellow));
-        }
 
         clearInterval(ss.timer);
         ss.timer = setInterval(() => (ss.ticks += 1), TICK_MS);

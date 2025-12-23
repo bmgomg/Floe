@@ -1,13 +1,10 @@
 <script>
-    import imgX from '$lib/images/X.webp';
-    import { X } from './const';
     import { _prompt } from './state.svelte';
     import { post } from './utils';
 
     const { op } = $props();
 
     let scale = $state(1);
-    const x = $derived(op.label === X);
     const style = $derived(`transform: scale(${scale})`);
 
     $effect(() => {
@@ -29,12 +26,8 @@
     });
 </script>
 
-<div id={op.label} class={['button-base no-highlight button', { x }]} style={`${op.style}; ${style}`} onpointerdown={() => (scale = 0.8)}>
-    {#if x}
-        <img src={imgX} alt="X" width={14} />
-    {:else}
-        {op.label}
-    {/if}
+<div id={op.label} class='button-base no-highlight button' style={`${op.style}; ${style}`} onpointerdown={() => (scale = 0.8)}>
+    {op.label}
 </div>
 
 <style>
@@ -56,10 +49,5 @@
         filter: contrast(1.1) saturate(1.5);
         border: 3px solid #fff;
         color: white;
-    }
-
-    .x {
-        width: 51px;
-        margin-bottom: -1px;
     }
 </style>

@@ -62,7 +62,6 @@
         place-content: center;
         gap: 20px;
         border-radius: 50vh;
-        /* border: 2px solid #001c45; */
         border: 2px solid var(--lightblue);
         background: #284367;
         color: var(--lightblue);
@@ -82,7 +81,7 @@
     }
 
     .label {
-        color: #001c45;
+        color: var(--label);
     }
 
     .flow {

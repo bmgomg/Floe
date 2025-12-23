@@ -8,7 +8,7 @@
 {#if !_prompt.opacity && !ss.dlg}
     <div class="pond-value" transition:fade={{ duration: 100 }}>
         <div class="item">
-            <span class="label">POND VALUE</span>
+            <span class="label">FIELD VALUE</span>
             <div class="flow"><NumberFlow value={ss.cells.reduce((sum, cell) => sum + cellValue(cell), 0)} /></div>
         </div>
     </div>
@@ -24,7 +24,6 @@
         place-content: center;
         gap: 20px;
         border-radius: 50vh;
-        /* border: 2px solid #001c45; */
         border: 2px solid var(--lightblue);
         background: #284367;
         color: var(--lightblue);
@@ -44,8 +43,7 @@
     }
 
     .label {
-        /* color: black; */
-        color: #001c45;
+        color: var(--label);
     }
 
     .flow {

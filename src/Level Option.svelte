@@ -81,7 +81,7 @@
     }
 
     .current {
-        border: 4px dotted var(--white);
+        border: 4px dotted var(--lightblue);
     }
 
     .value {

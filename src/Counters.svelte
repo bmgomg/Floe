@@ -81,7 +81,7 @@
     .score {
         grid-area: 1/2;
         place-self: center;
-        color: var(--white);
+        color: var(--lightblue);
         display: grid;
         place-items: center;
     }
