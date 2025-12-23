@@ -335,7 +335,7 @@
     }
 
     .warn {
-        filter: hue-rotate(180deg) grayscale(0.7);
+        filter: hue-rotate(180deg) sepia(1);
     }
 
     .frog {
