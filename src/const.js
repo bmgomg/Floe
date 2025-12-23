@@ -17,8 +17,8 @@ export const DLG_HELP = 'HELP';
 export const DLG_LEVELS = 'LEVELS';
 export const PROMPT_RESET_STATS = 'Reset stats?';
 export const PROMPT_LOST = 'Oh, no! Try again?';
-export const PROMPT_WON = 'Reunited! New mission?';
-export const PROMPT_BEST_SCORE = 'Best score! New mission?';
+export const PROMPT_WON = 'Reunited! Venture again?';
+export const PROMPT_BEST_SCORE = 'Best score! Venture again?';
 export const PROMPT_PLAY_AGAIN = 'Try again?';
 export const TICK_MS = 10;
 
