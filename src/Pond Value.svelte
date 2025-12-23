@@ -24,9 +24,9 @@
         place-content: center;
         gap: 20px;
         border-radius: 50vh;
-        border: 2px solid var(--lightblue);
+        border: 2px solid var(--lblue);
         background: #284367;
-        color: var(--lightblue);
+        color: var(--lblue);
         font-size: 18px;
         filter: drop-shadow(0 0 3px #000000a0);
     }

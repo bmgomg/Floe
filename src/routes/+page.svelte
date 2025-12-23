@@ -72,9 +72,7 @@
             --blue: #00bbff;
             --yellow: #ca7e31;
             --darkblue: #124267;
-            --lightgreen: #c6ffaa;
-            --lightblue: #aac6ff;
-            /* --label: #001c45; */
+            --lblue: #aac6ff;
             --label: #ffffff40;
         }
 

@@ -9,7 +9,7 @@
     const li = '<li style="margin: 8px 0 0 -20px;">';
     const red = '<span style="color: var(--red)">';
     const blue = '<span style="color: var(--blue)">';
-    const hi = '<span style="color: var(--lightblue)">';
+    const hi = '<span style="color: var(--lblue)">';
 
     const CONTENT = `
         <span>Reunite two stranded researchers at the center of the drifting ice field.</span>
@@ -98,7 +98,7 @@
         /* width: 50%; */
         display: grid;
         place-items: center;
-        color: var(--lightblue);
+        color: var(--lblue);
         font-family: Futura;
         font-weight: bold;
         font-size: 52px;

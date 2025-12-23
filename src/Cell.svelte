@@ -25,7 +25,7 @@
     const frog = $derived(frogs.length ? frogs[0] : null);
     const cid = $derived(cellId(cell));
     let _frog = $state();
-    const shadow = $derived(`drop-shadow(0 0 ${3 - (li.size - 5) / 2}px var(--lightblue))`);
+    const shadow = $derived(`drop-shadow(0 0 ${3 - (li.size - 5) / 2}px var(--lblue))`);
 
     const float = (on) => {
         show = (on || ss.over) && ss.over !== cell;
@@ -244,7 +244,7 @@
         id={innerId(cell)}
         class="inner {show || (center && ss.over === 'won') ? 'show' : ''}"
         style="transition-duration: {SINK_DURATION}ms;">
-        <img class="lilypad {warn && !ss.over ? 'warn' : ''}" src={Floe} alt="" style="scale: {center ? 0.85 : 1}" />
+        <img class="lilypad {warn && !ss.over ? 'warn' : ''}" src={Floe} alt="" style="scale: {center ? 1 : 1}" />
         <img
             class="lily {ss.over && !frog && cell.visited ? 'visible' : ''}"
             src={ss.over === 'won' ? Heart : HeartBroken}
@@ -331,6 +331,7 @@
         border: 2px solid var(--white);
         border-radius: 50%;
         z-index: 1;
+        scale: 1.1;
     }
 
     .inner {

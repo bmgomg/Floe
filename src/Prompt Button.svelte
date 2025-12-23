@@ -38,9 +38,9 @@
         padding: 10px 20px;
         font-family: Quicksand;
         font-weight: bold;
-        color: var(--lightblue);
+        color: var(--lblue);
         border-radius: 50vh;
-        border: 3px solid var(--lightblue);
+        border: 3px solid var(--lblue);
         background: #284367;
         filter: drop-shadow(0 0 3px #000000a0);
     }
