@@ -40,6 +40,7 @@
     };
 
     const onPlayAgain = () => {
+        _sound.play('plop');
         reBoard(ss.level);
     };
 </script>

@@ -26,6 +26,8 @@
     };
 
     const onResetStats = () => {
+        _sound.play('plop');
+
         if (_prompt.id == PROMPT_RESET_STATS) {
             _prompt.opacity = 0;
             return;
