@@ -287,7 +287,7 @@
     .trace-yellow {
         border: 4px dotted;
         pointer-events: auto;
-        cursor: pointer;
+        /* cursor: pointer; */
         z-index: 1;
     }
 

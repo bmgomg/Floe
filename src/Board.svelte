@@ -9,7 +9,9 @@
     const grid = $derived(`repeat(${li.size * 2}, ${ss.cellRadius}px) / repeat(${li.size}, ${ss.cellRadius * sqrt3}px)`);
 </script>
 
-<div class="board {ss.reboard === 'hide' ? 'hidden' : ''}" style="width: {sqrt3.pondWidth}px; height: {ss.pondHeight}px; grid: {grid};">
+<div
+    class="board {ss.reboard === 'hide' ? 'hidden' : ''} {ss.over ? '' : ss.turn === 1 ? 'pointer-red' : ss.turn === 2 ? 'pointer-blue' : ''}"
+    style="width: {sqrt3.pondWidth}px; height: {ss.pondHeight}px; grid: {grid};">
     {#each ss.cells as cell (cellId(cell))}
         <Cell {cell} />
     {/each}
@@ -28,5 +30,13 @@
     .hidden {
         scale: 0;
         opacity: 0;
+    }
+
+    .pointer-red {
+        cursor: url('$lib/images/Pointer Red.webp'), auto;
+    }
+
+    .pointer-blue {
+        cursor: url('$lib/images/Pointer Blue.webp'), auto;
     }
 </style>
