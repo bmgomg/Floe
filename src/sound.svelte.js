@@ -24,7 +24,7 @@ const sprite = {
 };
 
 const howl = new Howl({ src: [sounds], sprite });
-const loop = new Howl({ src: [music], loop: true, volume: 0.3 });
+const loop = new Howl({ src: [music], loop: true, volume: 0.6 });
 
 export const _sound = $state({
     sfx: true,
