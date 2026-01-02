@@ -9,6 +9,7 @@
     const li = '<li style="margin: 8px 0 0 -20px;">';
     const red = '<span style="color: var(--red)">';
     const blue = '<span style="color: var(--blue)">';
+    const gold = '<span style="color: var(--gold)">';
     const hi = '<span style="color: var(--lblue)">';
 
     const CONTENT = `
@@ -18,7 +19,7 @@
         ${li}Then, move the ${blue}blue</span>‑coated researcher.</li>
         ${li}Continue alternating until they meet on the ${hi}central</span> floe.</li>
         ${li}If a floe ${hi}thaws</span> beneath a researcher, they ${hi}fall through</span>—and the ${hi}mission ends</span> in failure.</li>
-        ${li}Earn ${hi}points</span> for each safe ${hi}landing</span>—${hi}except</span> on floes you've already ${hi}visited</span>.</li>
+        ${li}Earn ${gold}points</span> for each safe ${hi}landing</span>—${hi}except</span> on floes you've already ${hi}visited</span>.</li>
         ${li}${hi}Time melts</span> your score—one point per second.</li>
         </ul>`;
 

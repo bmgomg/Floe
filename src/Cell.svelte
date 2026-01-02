@@ -2,7 +2,8 @@
     import Both from '$lib/images/Both.webp';
     import Floe from '$lib/images/Floe.webp';
     import HeartBroken from '$lib/images/Heart Broken.webp';
-    import Heart from '$lib/images/Heart.webp';
+    import HeartBlue from '$lib/images/Heart Blue.webp';
+    import HeartRed from '$lib/images/Heart Red.webp';
     import { random } from 'lodash-es';
     import { fade } from 'svelte/transition';
     import { PROMPT_LOST, PROMPT_WON, SINK_DURATION } from './const';
@@ -158,7 +159,7 @@
 
         if (!cell.visited) {
             const cob = ss.cells.find((c) => samePos(c, cell));
-            cob.visited = true;
+            cob.visited = ss.turn;
 
             const value = cellValue(cell);
             ss.points += value;
@@ -224,7 +225,7 @@
             style="scale: {center ? 1 : 1};" />
         <img
             class="lily {ss.over && !frog && cell.visited ? 'visible' : ''}"
-            src={ss.over === 'won' ? Heart : HeartBroken}
+            src={ss.over === 'won' ? (cell.visited === 1 ? HeartRed : HeartBlue) : HeartBroken}
             alt=""
             style="filter: drop-shadow(0 0 {5 - ss.level}px #fff);" />
         {#if ss.over === 'won'}
